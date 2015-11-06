@@ -1,0 +1,33 @@
+.jumbotron {
+  text-align: center;
+}
+.jumbotron-img {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+.jumbotron-title {
+  position: relative;
+  top: -300px;
+  color: white;
+  font-size: 72px;
+}
+.jumbotron-words {
+  position: relative;
+  left: 25%;
+  top: -300px;
+  color: white;
+  font-size: 25px;
+  width: 50%;
+}
+.logo-home {
+  position: relative;
+  left: 10%;
+}
+.links-home {
+  position: relative;
+  right: 10%;
+}
+.home-footbar {
+  margin-top: -100px;
+}
