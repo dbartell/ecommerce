@@ -1,3 +1,3 @@
-angular.module('ecommerceApp').controller('homeCtrl', function() {
+angular.module('corApp').controller('homeCtrl', function() {
 
 });

@@ -9,36 +9,46 @@
   <!-- LINK FILES -->
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/footbar.css">
+  <link rel="stylesheet" href="styles/permits.css">
 </head>
 <body ng-app="corApp">
 
-  <nav>
-    <div class="nav-wrapper light-blue accent-2">
-      <a href="#/" class="brand-logo logo-home">COR Industries</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down links-home">
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/">Services</a></li>
-        <li><a href="#/">About</a></li>
-        <li><a href="#/">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <nav class="nav-bar">
+   <div class="nav-wrapper light-blue accent-2">
+     <a href="#/" class="brand-logo logo-home">COR Industries</a>
+     <a href="#" data-activates="mobile-demo" data-beloworigin="true" class="button-collapse dropdown-button mobile-drop-home"><i class="medium material-icons menu-icon">menu</i></a>
+     <ul class="right hide-on-med-and-down links-home">
+       <li><a href="#/">Home</a></li>
+       <li><a href="#/services">Services</a></li>
+       <li><a href="#/howto">How To</a></li>
+     </ul>
+     <ul class="dropdown-content mobile-drop" id="mobile-demo">
+       <li><a class="center-align drop-navbar" href="#/" style="padding-top: 30px">Home</a></li>
+       <li class="divider"></li>
+       <li><a class="center-align drop-navbar" href="#/services" style="padding-top: 30px">Services</a></li>
+       <li class="divider"></li>
+       <li><a class="center-align drop-navbar" href="#/howto" style="padding-top: 30px">How To</a></li>
+     </ul>
+   </div>
+ </nav>
 
   <ng-view></ng-view>
 
-
-
+  <!-- ANGULAR -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
   <!--MATERIALIZE-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
   <script src="app/materialize.min.js"></script>
-  <!--ANGULAR-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+  <!--ANGULARROUTE-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/path.js/0.8.4/path.min.js"></script>
   <!--ANGULAR JS-->
   <script src="app/app.js"></script>
   <!--CONTROLLERS-->
   <script src="app/routes/home/homeCtrl.js"></script>
+  <script src="app/routes/services/servicesCtrl.js"></script>
+  <script src="app/routes/permits/permitsCtrl.js"></script>
   <!--SERVICES-->
   <script src="app/services/service.js"></script>
   <!-- DIRECTIVES -->

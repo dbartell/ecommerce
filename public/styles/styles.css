@@ -1,3 +1,9 @@
+body {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
 .jumbotron {
   text-align: center;
 }
@@ -8,17 +14,17 @@
 }
 .jumbotron-title {
   position: relative;
-  top: -300px;
-  color: white;
+  top: -25px;
+  color: black;
   font-size: 72px;
 }
 .jumbotron-words {
   position: relative;
   left: 25%;
-  top: -300px;
-  color: white;
+  top: -25px;
+  color: black;
   font-size: 25px;
-  width: 50%;
+  width: 52%;
 }
 .logo-home {
   position: relative;
@@ -31,3 +37,111 @@
 .home-footbar {
   margin-top: -100px;
 }
+
+.mobile-drop-home {
+  width: 80%;
+}
+.mobile-drop li {
+}
+.mobile-drop li a {
+  height: 80px;
+  color: black;
+  font-size: 36px;
+}
+.service-content {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.pilot-service {
+  width: 700px;
+  height: auto;
+}
+.services-words-pilot {
+  position: absolute;
+  top: 350px;
+
+}
+.pilot-service img {
+  width: 100%;
+  height: 450px;
+  opacity: 0.6;
+}
+.pilot-service img:hover {
+  opacity: 1;
+}
+.permit-service {
+  width: 700px;
+  height: auto;
+}
+.services-words-permit {
+  position: absolute;
+  top: 350px;
+}
+.permit-service img {
+  width: 100%;
+  height: 450px;
+  opacity: 0.6;
+}
+
+.permit-service img:hover {
+  opacity: 1;
+}
+
+.howto-words {
+  font-size: 25px;
+}
+ @media (max-width: 650px) {
+   .nav-bar {
+     height: 100px;
+   }
+   .logo-home {
+     margin-top: 25px;
+   }
+   .menu-icon {
+     margin-top: 25px;
+     margin-left: 25px;
+   }
+   .jumbotron-title {
+     font-size: 60px;
+   }
+   .jumbotron-words {
+     width: 80%;
+     left: 10%;
+   }
+   .pilot-service img {
+     height: 300px;
+   }
+   .services-words-permit {
+     position: absolute;
+     top: 0px;
+     display: none;
+   }
+   .permit-service img {
+     height: 300px;
+   }
+   .services-words-pilot {
+     position: absolute;
+     top: -200px;
+     display: none;
+   }
+ }
+ @media (max-width: 1400px) {
+   .services-footbar {
+     position: relative;
+     top: 490px;
+   }
+   .services-words-permit {
+     position: absolute;
+     top: 300px;
+   }
+   .services-words-pilot {
+     position: absolute;
+     top: 750px;
+   }
+ }
