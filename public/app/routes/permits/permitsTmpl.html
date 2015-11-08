@@ -1,19 +1,19 @@
-<h6 class="fill-out">Please fill out the following forms</h6>
-<form>
+<h6 class="fill-out">Please fill out the following form</h6>
+<form ng-submit="addPermit()">
   <ul class="collapsible collapsible-permit" data-collapsible="accordion">
 
     <li class="edit-business-info">
       <div class="collapsible-header header-permit center-align"><i class="large material-icons">supervisor_account</i>Truck Information</div>
       <div class="collapsible-body body-permit">
         <div>
-          <div class="input-truck"><input class="input" placeholder="Company" type="text"></input></div>
-          <div class="input-truck"><input class="input" placeholder="License Plate #" type="text"></input></div>
-          <div class="input-truck"><input class="input" placeholder="Truck #" type="text"></input></div>
-          <div class="input-truck"><input class="input" placeholder="Trailer #" type="text"></input></div>
-          <div class="input-truck"><input class="input" placeholder="Length" type="text"></input></div>
-          <div class="input-truck"><input class="input" placeholder="# of Axles" type="text"></input></div>
-          <div class="input-truck"><input class="input" placeholder="Axle Width" type="text"></input></div>
-          <div class="input-truck"><input class="input" placeholder="Hauling Equipment" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.company" class="input" placeholder="Company" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.licence" class="input" placeholder="License Plate #" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.truck" class="input" placeholder="Truck #" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.trailer" class="input" placeholder="Trailer #" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.trailerlength" class="input" placeholder="Trailer Length" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.axles" class="input" placeholder="# of Axles" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.axlewidth" class="input" placeholder="Axle Width" type="text"></input></div>
+          <div class="input-truck"><input ng-model="permit.equipment" class="input" placeholder="Hauling Equipment" type="text"></input></div>
         </div>
       </div>
     </li>
@@ -21,11 +21,11 @@
     <li class="edit-business-info">
       <div class="collapsible-header header-permit center-align"><i class="large material-icons">location_on</i>Route Description</div>
       <div class="collapsible-body body-permit">
-        <div class="input-truck"><input class="input" placeholder="Effective Date" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Origin" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Destination" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Requested Route" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="States Requested" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.date" class="input" placeholder="Effective Date" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.origin" class="input" placeholder="Origin" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.destination" class="input" placeholder="Destination" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.route" class="input" placeholder="Requested Route" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.states" class="input" placeholder="States Requested" type="text"></input></div>
       </div>
     </li>
 
@@ -33,43 +33,43 @@
       <div class="collapsible-header header-permit center-align"><i class="large material-icons">album</i>Load Specs</div>
       <div class="collapsible-body body-permit">
         <p>Load Description</p>
-        <div class="input-truck"><input class="input" placeholder="Length" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Height" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Width" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.length" class="input" placeholder="Length" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.height" class="input" placeholder="Height" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.width" class="input" placeholder="Width" type="text"></input></div>
         <p>Overall Dimensions</p>
-        <div class="input-truck"><input class="input" placeholder="OAL" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="FOH" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="ROH" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="OAW" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="OAH" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="KPLA (CA ONLY)" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.oal" class="input" placeholder="OAL" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.foh" class="input" placeholder="FOH" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.roh" class="input" placeholder="ROH" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.oaw" class="input" placeholder="OAW" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.oah" class="input" placeholder="OAH" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.kpla" class="input" placeholder="KPLA (CA ONLY)" type="text"></input></div>
       </div>
     </li>
 
     <li class="edit-business-info">
       <div class="collapsible-header header-permit center-align"><i class="large material-icons">av_timer</i>Weights</div>
       <div class="collapsible-body body-permit">
-        <div class="input-truck"><input class="input" placeholder="Steer (Group 1)" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Truck" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Drives (Group 2)" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Group 3" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Group 4" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Group 5" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Gross Weight" type="text"></input></div>
-        <div class="input-truck"><input class="input" placeholder="Tire Count/ Size" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.groupone" class="input" placeholder="Steer (Group 1)" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.truckweights" class="input" placeholder="Truck" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.grouptwo" class="input" placeholder="Drives (Group 2)" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.groupthree" class="input" placeholder="Group 3" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.groupfour" class="input" placeholder="Group 4" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.groupfive" class="input" placeholder="Group 5" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.grossweight" class="input" placeholder="Gross Weight" type="text"></input></div>
+        <div class="input-truck"><input ng-model="permit.tirecount" class="input" placeholder="Tire Count/ Size" type="text"></input></div>
       </div>
     </li>
 
     <li class="edit-business-info">
       <div class="collapsible-header header-permit center-align"><i class="large material-icons">description</i>Notes</div>
       <div class="collapsible-body body-permit">
-        <div class="input-truck"><textarea class="materialize-textarea" placeholder="Notes" type="text"></textarea></div>
+        <div class="input-truck"><textarea ng-model="permit.notes" class="materialize-textarea" placeholder="Notes" type="text"></textarea></div>
       </div>
     </li>
 
   </ul>
   <div class="right-align">
-    <input class="light-blue accent-2 waves-effect waves-light btn submit-button-permits" type="submit"></input>
+    <input class="light-blue accent-2 waves-effect waves-light btn submit-button-permits" type="submit" message="you've successfullly submitted this form" duration="3000" toast='click'></input>
   </div>
 </form>
 <foot-bar></foot-bar>
