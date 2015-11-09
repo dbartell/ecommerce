@@ -28,6 +28,14 @@ app.config(function ($routeProvider) {
     templateUrl: "app/routes/howto/howtoTmpl.html",
     controller: "howtoCtrl"
   })
+  // .when('/addProduct', {
+  //   templateUrl: "app/routes/addProduct/addProductTmpl.html",
+  //   controller: "addProductCtrl"
+  // })
+  .when('/adminhome', {
+    templateUrl: "app/routes/admin/adminHome/adminHomeTmpl.html",
+    controller: "adminHomeCtrl"
+  })
   .otherwise({
     redirectTo: '/home'
   });

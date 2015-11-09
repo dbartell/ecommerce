@@ -2,6 +2,11 @@ var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
   permit: {
+    name: String,
+    email: String,
+    phone: String,
+    fax: String,
+
     company: String,
     licence: String,
     truck: String,

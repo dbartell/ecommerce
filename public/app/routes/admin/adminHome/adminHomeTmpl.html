@@ -1,0 +1,30 @@
+    <!-- <table class="highlight">
+        <thead>
+          <tr>
+              <th data-field="businessName">Business Name</th>
+              <th data-field="employee">Employee</th>
+              <th data-field="phone">Phone #</th>
+              <th data-field="email">Email</th>
+              <th data-field="fax">Fax</th>
+          </tr>
+        </thead> -->
+
+          <ul class="collapsible" data-collapsible="accordion">
+            <li ng-repeat="permit in permits">
+                <div class="collapsible-header">
+                      {{permit.permit.company}}
+                      {{permit.permit.employee}}
+                      {{permit.permit.phone}}
+                      {{permit.permit.email}}
+                      {{permit.permit.fax}}
+                </div>
+              <div class="collapsible-body"><p>hello</p></div>
+            </li>
+          </ul>
+      <!-- </table> -->
+<ul class="collapsible popout" data-collapsible="accordion" watch>
+    <li ng-repeat="permit in permits">
+        <div class="collapsible-header">{{permit.permit.company}}</div>
+        <div class="collapsible-body"><p>{{permit.permit.employee}}</p></div>
+    </li>
+</ul>

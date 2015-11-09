@@ -10,4 +10,12 @@ angular.module('corApp')
       }
    });
  };
+ this.getPermits = function () {
+   return $http({
+     method: "GET",
+     url: "http://localhost:9090/permits"
+   }).then(function(response){
+     return response;
+   });
+ };
 });

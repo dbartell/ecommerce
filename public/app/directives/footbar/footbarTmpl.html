@@ -1,14 +1,28 @@
-<footer class="page-footer light-blue accent-2 z-depth-1">
+<footer class="page-footer light-blue accent-2 z-depth-1" ng-controller="footbarCtrl">
   <div class="footer-content">
     <div class="footer-one"></div>
     <div class="footer-two">
       <h3 class="footer-header">Settings</h3>
-      <p class="footer-p"><i class="small material-icons footer-icons">perm_identity</i>Login/Logout</p>
+
+
+      <!-- Modal Trigger -->
+      <a href='#login' class="modal-trigger" modal><p class="footer-p"><i class="small material-icons footer-icons">perm_identity</i>Login/Logout</p></a>
+
+      <!-- Modal Structure -->
+      <div id="login" class="modal">
+        <div class="modal-content">
+          <input type="text" class="input-truck" ng-model='user.email' placeholder="email">
+          <input type="password" class="input-truck" ng-model='user.password' placeholder="password">
+          <button onclick="Materialize.toast()" ng-click='loginSubmit(user)'>submit</button>
+        </div>
+      </div>
+
+
     </div>
     <div class="footer-three">
       <h3 class="footer-header">Contact</h3>
       <p class="footer-p"><i class="small material-icons footer-icons">call</i>801.850.1675</p>
       <p class="footer-p"><i class="small material-icons footer-icons">email</i>corindustries@gmail.com</p>
     </div>
-  </div>
+
 </footer>
