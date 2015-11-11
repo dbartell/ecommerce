@@ -29,7 +29,7 @@
 .footer-p {
   position: relative;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 @media (max-width: 650px) {
@@ -41,5 +41,9 @@
   }
   .footer-three {
     flex: 1.5;
+  }
+  .footer-email {
+    position: relative;
+    left: -25px;
   }
 }

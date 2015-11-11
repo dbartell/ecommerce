@@ -16,14 +16,14 @@ body {
   position: relative;
   top: -25px;
   color: black;
-  font-size: 72px;
+  font-size: 65px;
 }
 .jumbotron-words {
   position: relative;
   left: 25%;
   top: -25px;
   color: black;
-  font-size: 25px;
+  font-size: 22px;
   width: 52%;
 }
 .logo-home {
@@ -98,17 +98,17 @@ body {
 }
  @media (max-width: 650px) {
    .nav-bar {
-     height: 100px;
+     height: 75px;
    }
    .logo-home {
-     margin-top: 26px;
+     margin-top: 10px;
    }
    .menu-icon {
-     margin-top: 25px;
+     margin-top: 10px;
      margin-left: 25px;
    }
    .jumbotron-title {
-     font-size: 60px;
+     font-size: 48px;
    }
    .jumbotron-words {
      width: 80%;

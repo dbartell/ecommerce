@@ -22,26 +22,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-var isAuthed = function(req, res, next){
-  if(!req.isAuthenticated()) {return res.sendStatus(401);}
-  return next();
-};
-
-app.post('/user', UserController.register);
-app.get('/user', UserController.me);
-app.put('/user', isAuthed, UserController.update);
-app.post('/login', passport.authenticate('local',{
-	successRedirect:'/user'
-}));
-app.get('/logout', function(req,res){
- req.logout();
- req.session.destroy(function (err) {
-        res.redirect('/');
-    });
-});
-
 app.get('/permits', PermitController.read);
 app.post('/permits', PermitController.create);
+app.put('/permits/:id', PermitController.update);
+app.delete('/permits/:id', PermitController.delete);
 
 // app.get('/user', UserController.read);
 app.get('/user/:id', UserController.find);

@@ -20,18 +20,18 @@ app.config(function ($routeProvider) {
     templateUrl: "app/routes/permits/permitsTmpl.html",
     controller: "permitsCtrl"
   })
+  .when('/savedpermits', {
+    templateUrl: "app/routes/permits/savedTmpl.html",
+    controller: "permitsCtrl"
+  })
   .when('/contactinfo', {
     templateUrl: "app/routes/contactinfo/contactinfoTmpl.html",
-    controller: "contactinfoCtrl"
+    controller: "contactinfoCtrl",
   })
   .when('/howto', {
     templateUrl: "app/routes/howto/howtoTmpl.html",
     controller: "howtoCtrl"
   })
-  // .when('/addProduct', {
-  //   templateUrl: "app/routes/addProduct/addProductTmpl.html",
-  //   controller: "addProductCtrl"
-  // })
   .when('/adminhome', {
     templateUrl: "app/routes/admin/adminHome/adminHomeTmpl.html",
     controller: "adminHomeCtrl"

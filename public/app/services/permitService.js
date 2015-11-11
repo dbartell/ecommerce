@@ -18,4 +18,11 @@ angular.module('corApp')
      return response;
    });
  };
+ this.deletePermit = function (id) {
+   return $http({
+     method: 'DELETE',
+     url: "http://localhost:9090/permits/" + id
+   });
+ };
+
 });

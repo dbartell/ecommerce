@@ -13,8 +13,9 @@ var schema = new mongoose.Schema({
     trailer: String,
     trailerlength: String,
     axles: String,
-    axleswidth: String,
+    axlewidth: String,
     equipment: String,
+    description: String,
 
     date: String,
     origin: String,
