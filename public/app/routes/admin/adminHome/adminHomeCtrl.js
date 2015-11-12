@@ -13,4 +13,31 @@ angular.module('corApp').controller('adminHomeCtrl', function($scope, permitServ
   };
 
   getData();
+
+  $scope.demoFromHTML = function() {
+    console.log("hello");
+      var pdf = new jsPDF('p', 'pt', 'letter');
+      source = $('#customers')[0];
+      specialElementHandlers = {
+          '#bypassme': function (element, renderer) {
+              return true;
+          }
+      };
+      margins = {
+          top: 50,
+          bottom: 50,
+          left: 75,
+          width: 460
+      };
+      pdf.fromHTML(
+      source,
+      margins.left,
+      margins.top, {
+          'width': margins.width,
+          'elementHandlers': specialElementHandlers
+      },
+      function (dispose) {
+          pdf.save('Test.pdf');
+      }, margins);
+  };
 });

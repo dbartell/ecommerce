@@ -1,123 +1,155 @@
 <h3 class="permit-header">Current Permits ({{permits.length}})</h3>
 <div>
-    <div class="row">
-        <div class="s8 offset-s2 col">
-            <div class="row">
-              <div ng-repeat="permit in permits">
-                  <!-- CARD -->
-                  <div class="card blue-grey lighten-3">
+  <div class="row">
+    <div class="s8 offset-s2 col">
+      <div class="row">
+        <div ng-repeat="permit in permits">
+          <!-- CARD -->
+          <div class="card blue-grey lighten-3" id="customers">
 
-                    <div class="card-header">
-                      <div class="grey lighten-3 daddy-flex">
-                        <div class="da-flex">{{permit.permit.name}}</div>
-                        <div class="da-flex"><p class="lefty">{{permit.permit.email}}</p></div>
-                        <div class="da-flex-small">Phone: {{permit.permit.phone}}</div>
-                        <div class="da-flex-small">Fax: {{permit.permit.fax}}</div>
-                      </div>
-                    </div>
-
-                      <div class="card-content left-align">
-                          <div class="max-box">
-
-                            <div class="form-names">
-                              <p class="black-text"> COMPANY <p>
-                              <p class="black-text"> TRUCK # <p>
-                              <p class="black-text"> TRAILER # </p>
-                              <p class="black-text"> ORIGIN <p>
-                              <p class="black-text"> DESTINATION (ADDRESS) <p>
-                              <p class="black-text"> REQUESTED ROUTE <p>
-                              <p class="black-text"> STATES REQUESTED <p>
-                            </div>
-
-                            <div class="form-info">
-                              <p class="black-text"><u>{{permit.permit.company}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.truck}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.trailer}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.origin}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.destination}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.route}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.states}}</u></p>
-                            </div>
-
-                            <div class="form-names-two">
-                              <p class="black-text">EFFECTIVE DATE: <p>
-                              <p class="black-text"> LICENCE PLATE # </p>
-                              <p class="black-text"> LENGTH </p>
-                              <p class="black-text"> AXLE WIDTH </p>
-                            </div>
-
-                            <div class="form-info-two">
-                              <p class="black-text"><u>{{permit.permit.date}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.licence}}</u></p>
-                              <p class="black-text"><u>{{permit.permit.length}}</u></p>
-                              <p class="black-text"><u> {{permit.permit.axlewidth}}</u></p>
-                            </div>
-
-                          </div>
-
-                          <div class="max-box-two">
-                            <div class="form-names-three">
-                              <p class="black-text"> HAULING EQUIPMENT </p>
-                              <p class="black-text"> LOAD DESCRIPTION </p>
-                              <p class="black-text"> LENGTH </p>
-                              <p class="black-text"> HEIGHT </p>
-                              <p class="black-text"> WIDTH </p>
-                              <p class="black-text"> OAL </p>
-                              <p class="black-text"> FOH </p>
-                              <p class="black-text"> ROH </p>
-                              <p class="black-text"> OAH </p>
-                              <p class="black-text"> KPLA (CA ONLY) </p>
-                            </div>
-
-                          <div class="form-info-three">
-                            <p class="black-text"><u>{{permit.permit.equipment}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.description}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.length}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.height}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.width}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.oal}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.foh}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.roh}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.oah}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.kpla}}</u><p>
-                          </div>
-
-                          <div class="form-names-four">
-                            <p class="black-text"> WEIGHTS </p>
-                            <p class="black-text"> STEER (GROUP 1) </p>
-                            <p class="black-text"> TRUCK </p>
-                            <p class="black-text"> DRIVES (GROUP 2) </p>
-                            <p class="black-text"> GROUP 3 </p>
-                            <p class="black-text"> GROUP 4 </p>
-                            <p class="black-text"> GROUP 5 </p>
-                            <p class="black-text"> GROSS WEIGHT </p>
-                            <p class="black-text"> TIRE COUNT / SIZE </p>
-                          </div>
-
-                          <div class="form-info-four">
-                            <p class="black-text"><u>{{permit.permit.groupone}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.truckweights}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.grouptwo}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.groupthree}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.groupfour}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.groupfive}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.grossweight}}</u><p>
-                            <p class="black-text"><u>{{permit.permit.tirecount}}</u><p>
-                          </div>
-
-                      </div>
-                      <div class="black-text notes">
-                        NOTES: {{permit.permit.notes}}
-                      </div>
-                      <div class="right-align">
-                        <button class="btn permit-button light-blue accent-2" ng-click="">Print</button>
-                        <button class="btn permit-button light-blue accent-2" ng-click="deleteDaPermit(permit._id)">Delete</button>
-                      </div>
-                  </div>
+            <div class="card-header">
+              <div class="grey lighten-3 daddy-flex">
+                <div class="da-flex">{{permit.permit.name}}</div>
+                <div class="da-flex">
+                  <p class="lefty">{{permit.permit.email}}</p>
+                </div>
+                <div class="da-flex-small">Phone: {{permit.permit.phone}}</div>
+                <div class="da-flex-small">Fax: {{permit.permit.fax}}</div>
               </div>
             </div>
+
+            <table class="card-table">
+              <colgroup>
+                <col width="20%">
+                  <col width="20%">
+                    <col width="20%">
+                      <col width="20%">
+              </colgroup>
+              <thead>
+              </thead>
+              <tbody class="card-body">
+                <tr>
+                  <td>COMPANY</td>
+                  <td>{{permit.permit.company}}</td>
+                  <td>EFFECTIVE DATE:</td>
+                  <td>{{permit.permit.date}}</td>
+                </tr>
+                <tr>
+                  <td>TRUCK #</td>
+                  <td>{{permit.permit.truck}}</td>
+                  <td>LICENCE PLATE #</td>
+                  <td>{{permit.permit.licence}}</td>
+                </tr>
+                <tr>
+                  <td>TRAILER #</td>
+                  <td>{{permit.permit.trailer}}</td>
+                  <td>LENGTH</td>
+                  <td>{{permit.permit.length}}</td>
+                </tr>
+                <tr>
+                  <td>ORIGIN</td>
+                  <td>{{permit.permit.origin}}</td>
+                  <td>AXLE WIDTH</td>
+                  <td>{{permit.permit.axlewidth}}</td>
+                </tr>
+                <tr>
+                  <td>DESTINATION (ADDRESS)</td>
+                  <td>{{permit.permit.destination}}</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>REQUESTED ROUTE</td>
+                  <td>{{permit.permit.route}}</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 25px;">STATES REQUESTED</td>
+                  <td style="padding-bottom: 25px;">{{permit.permit.states}}</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>HAULING EQUIPMENT</td>
+                  <td>{{permit.permit.equipment}}</td>
+                  <td>WEIGHTS</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>LOAD DESCRIPTION</td>
+                  <td>{{permit.permit.description}}</td>
+                  <td>STEER (GROUP 1)</td>
+                  <td>{{permit.permit.groupone}}</td>
+                </tr>
+                <tr>
+                  <td>LENGTH</td>
+                  <td>{{permit.permit.length}}</td>
+                  <td>TRUCK</td>
+                  <td>{{permit.permit.truckweights}}</td>
+                </tr>
+                <tr>
+                  <td>HEIGHT</td>
+                  <td>{{permit.permit.height}}</td>
+                  <td>DRIVES (GROUP 2)</td>
+                  <td>{{permit.permit.grouptwo}}</td>
+                </tr>
+                <tr>
+                  <td>WIDTH</td>
+                  <td>{{permit.permit.width}}</td>
+                  <td>GROUP 3</td>
+                  <td>{{permit.permit.groupthree}}</td>
+                </tr>
+                <tr>
+                  <td>OAL</td>
+                  <td>{{permit.permit.oal}}</td>
+                  <td>GROUP 4</td>
+                  <td>{{permit.permit.groupfour}}</td>
+                </tr>
+                <tr>
+                  <td>FOH</td>
+                  <td>{{permit.permit.foh}}</td>
+                  <td>GROUP 5</td>
+                  <td>{{permit.permit.groupfive}}</td>
+                </tr>
+                <tr>
+                  <td>ROH</td>
+                  <td>{{permit.permit.roh}}</td>
+                  <td>GROSS WEIGHT</td>
+                  <td>{{permit.permit.grossweight}}</td>
+                </tr>
+                <tr>
+                  <td>OAH</td>
+                  <td>{{permit.permit.oah}}</td>
+                  <td>TIRE COUNT / SIZE</td>
+                  <td>{{permit.permit.tirecount}}</td>
+                </tr>
+                <tr>
+                  <td>KPLA (CA ONLY)</td>
+                  <td>{{permit.permit.kpla}}</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="card-notes">
+              NOTES: {{permit.permit.notes}}
+            </div>
+            <div class="right-align card-buttons">
+              <button class="btn permit-button light-blue accent-2" ng-click="demoFromHTML()">Print</button>
+              <button class="btn permit-button light-blue accent-2" ng-click="deleteDaPermit(permit._id)">Delete</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <foot-bar></foot-bar>

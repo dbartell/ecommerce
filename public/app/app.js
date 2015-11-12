@@ -24,10 +24,6 @@ app.config(function ($routeProvider) {
     templateUrl: "app/routes/permits/savedTmpl.html",
     controller: "permitsCtrl"
   })
-  .when('/contactinfo', {
-    templateUrl: "app/routes/contactinfo/contactinfoTmpl.html",
-    controller: "contactinfoCtrl",
-  })
   .when('/howto', {
     templateUrl: "app/routes/howto/howtoTmpl.html",
     controller: "howtoCtrl"

@@ -1,9 +1,3 @@
-.saved-button {
-  position: absolute;
-  right: 18px;
-  top: 21px;
-  color: white;
-}
 .permit-header {
   position: relative;
   left: 17%;
@@ -32,89 +26,23 @@
 .da-flex-small {
   flex: 0.75;
 }
-.max-box {
-  width: 100%;
-  height: auto;
-  display: flex;
-}
-.form-names {
-  flex: 1;
-  width: 200px;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
-.form-info {
-  position: relative;
-  left: px;
-  flex: 1;
-  width: 200px;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
-.form-names-two {
-  position: relative;
-  left: 50px;
-  flex: 1;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
-.form-info-two {
-  flex: 1;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
-.notes {
-  padding-left: 10px;
-  width: 550px;
-  height: auto;
-}
-.max-box-two {
-  width: 100%;
-  height: auto;
-  display: flex;
-  position: relative;
-  top: 25px;
-  margin-bottom: 25px;
-}
-.form-names-three {
-  position: relative;
-  left: 0px;
-  flex: 1;
-  width: 200px;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
-.form-info-three {
-  position: relative;
-  left: 0px;
-  flex: 1;
-  width: 200px;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
-.form-names-four {
-  position: relative;
-  left: 0px;
-  flex: 1;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
-.form-info-four {
-  position: relative;
-  top: 22px;
-  flex: 1;
-  height: auto;
-  padding-left: 10px;
-  margin-right: 0px;
-}
 .permit-button {
   position: relative;
   right: 0px;
+}
+.card-table {
+  position: relative;
+  left: 8%;
+  margin-top: 10px;
+}
+.card-notes {
+  position: relative;
+  top: 25px;
+  left: 8%;
+  width: 84%;
+}
+.card-buttons {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
