@@ -1,10 +1,10 @@
 angular.module('corApp')
 
-.service('permitService', function($http) {
+.service('permitService', function($http, constants) {
   this.submitPermit = function(data) {
     return $http({
       method: 'POST',
-      url: "http://localhost:9090/permits",
+      url: constants.baseURL + 'permits',
       data: {
         permit: data
       }
@@ -13,7 +13,7 @@ angular.module('corApp')
  this.getPermits = function () {
    return $http({
      method: "GET",
-     url: "http://localhost:9090/permits"
+     url: constants.baseURL + 'permits',
    }).then(function(response){
      return response;
    });
@@ -21,7 +21,7 @@ angular.module('corApp')
  this.deletePermit = function (id) {
    return $http({
      method: 'DELETE',
-     url: "http://localhost:9090/permits/" + id
+     url: constants.baseURL + 'permits' + id
    });
  };
 

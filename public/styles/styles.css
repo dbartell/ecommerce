@@ -96,6 +96,30 @@ body {
 .howto-words {
   font-size: 25px;
 }
+.signin-modal {
+  background-color: black;
+}
+.signin-modal-header {
+  color: white;
+}
+.signup-page {
+  width: 50%;
+  position: relative;
+  top: 100px;
+  left: 25%;
+}
+.login-page {
+  width: 50%;
+  position: relative;
+  top: 100px;
+  left: 25%;
+}
+.logout-button {
+  color: white;
+  position: absolute;
+  right: 75px;
+  top: 21px;
+}
  @media (max-width: 650px) {
    .nav-bar {
      height: 75px;
@@ -145,3 +169,37 @@ body {
      top: 750px;
    }
  }
+ input[type=text]:focus{
+   border-bottom: 1px solid black;
+   box-shadow: 0 1px 0 0 black;
+ }
+ .input-truck label {
+      color: black;
+    }
+
+ .input-truck input[type=text]:focus + label {
+      color: black;
+    }
+ .input-truck input[type=text]:focus {
+     border-bottom: 1px solid black;
+     box-shadow: 0 1px 0 0 black;
+   }
+   .input-truck input[type=text].valid {
+      border-bottom: 1px solid black;
+      box-shadow: 0 1px 0 0 black;
+    }
+    input-truck label {
+         color: black;
+       }
+
+    .input-truck textarea[type=text]:focus + label {
+         color: black;
+       }
+    .input-truck textarea[type=text]:focus {
+        border-bottom: 1px solid black;
+        box-shadow: 0 1px 0 0 black;
+      }
+      .input-truck textarea[type=text].valid {
+         border-bottom: 1px solid black;
+         box-shadow: 0 1px 0 0 black;
+       }

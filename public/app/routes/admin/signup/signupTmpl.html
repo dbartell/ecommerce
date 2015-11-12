@@ -1,0 +1,10 @@
+<form class="signup-page input-field" ng-submit="signup(user)">
+  <h3>Sign Up</h3>
+  <h6>Already a user?
+    <a href='#/login'>Login</a>
+  </h6>
+  <input type="email" ng-model="user.email" placeholder="Email" required/>
+  <input type="password" ng-model="user.password" placeholder="Password" required/>
+  <input type="password" ng-model="password_repeat" placeholder="Repeat Password"required/>
+  <button type="submit" name="signup">Sign Up</button>
+</form>

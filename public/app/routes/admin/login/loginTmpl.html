@@ -1,0 +1,15 @@
+<form class="login-page">
+  <div class="modal-content input-field">
+    <h4>Please Sign In:</h4>
+    <div class="row">
+      <input id="email" type="email" ng-model="user.email" class="input-truck validate" required/>
+      <label for="email">Email</label>
+    </div>
+    <div class="row">
+      <input id="password" type="password" ng-model="user.password" class="input-truck validate" required/>
+      <label for="password">Password</label>
+    </div>
+  </div>
+  <button class="btn" type="submit" name="login" ng-click="login(user)">Login</button>
+  <a href="#/signup">Sign Up</a>
+</form>

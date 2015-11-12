@@ -14,4 +14,5 @@ angular.module('corApp').controller('permitsCtrl', function($scope, permitServic
     console.log($scope.permit);
   };
 
+  $scope.logout = authService.logout();
 });

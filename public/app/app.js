@@ -1,6 +1,12 @@
-var app = angular.module('corApp', ['ngRoute', 'ui.materialize']);
+angular.module('corApp', ['ngRoute', 'ui.materialize'])
 
-app.config(function ($routeProvider) {
+.constant("constants",
+{
+  "baseURL": "http://localhost:9090/"
+})
+
+
+.config(function ($routeProvider) {
 
   $routeProvider
 
@@ -12,16 +18,8 @@ app.config(function ($routeProvider) {
     templateUrl: "app/routes/services/servicesTmpl.html",
     controller: "servicesCtrl"
   })
-  .when('/pilot', {
-    templateUrl: "app/routes/pilot/pilotTmpl.html",
-    controller: "pilotCtrl"
-  })
   .when('/permits', {
     templateUrl: "app/routes/permits/permitsTmpl.html",
-    controller: "permitsCtrl"
-  })
-  .when('/savedpermits', {
-    templateUrl: "app/routes/permits/savedTmpl.html",
     controller: "permitsCtrl"
   })
   .when('/howto', {
@@ -31,6 +29,14 @@ app.config(function ($routeProvider) {
   .when('/adminhome', {
     templateUrl: "app/routes/admin/adminHome/adminHomeTmpl.html",
     controller: "adminHomeCtrl"
+  })
+  .when('/login', {
+    templateUrl: "app/routes/admin/login/loginTmpl.html",
+    controller: "loginCtrl"
+  })
+  .when('/signup', {
+    templateUrl: "app/routes/admin/signup/signupTmpl.html",
+    controller: "signupCtrl"
   })
   .otherwise({
     redirectTo: '/home'

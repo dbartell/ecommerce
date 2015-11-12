@@ -4,7 +4,7 @@ angular.module('corApp')
 	this.newUserService=function(user) {
 		$http({
 			method:'POST',
-			url:'http://localhost:9090/user',
+			url: constants.baseURL + 'user',
 			data:user
 		}).then(function(err, res){
 			if (err) { return err;}
@@ -15,7 +15,7 @@ angular.module('corApp')
 	this.loginSubmit=function(user){
 		return $http({
 			method:"POST",
-			url:'http://localhost:9090/login',
+			url: constants.baseURL + 'login',
 			data:user
 		}).then(function(res,err){
 			return res;
@@ -26,7 +26,7 @@ angular.module('corApp')
 		var deferred=$q.defer();
 		$http({
 			method:"GET",
-			url:'http://localhost:9090/user'
+			url: constants.baseURL + 'user',
 		}).then(function(res){
 			var userName=res;
 			deferred.resolve(userName);

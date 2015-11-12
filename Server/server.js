@@ -6,6 +6,7 @@ var session = require('express-session');
 var passport = require('./services/passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+var config = require('../config');
 var PermitController = require('./Controllers/PermitController');
 var UserController = require('./Controllers/UserController');
 
@@ -15,28 +16,41 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + '/../public'));
 app.use(session({
-	secret:'dbaby',
-	saveUninitialized:true,
-	resave:true
+  secret: config.secret,
+  saveUninitialized: true,
+  resave: true
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+var isAuthed = function(req, res, next) {
+  if (!req.isAuthenticated()) return res.sendStatus(401);
+  return next();
+};
+
+app.post('/user', UserController.register);
+app.get('/user', isAuthed, UserController.me);
+app.put('/user', isAuthed, UserController.update);
+
+app.post('/login', passport.authenticate('local', {
+  successRedirect: '/user'
+}));
+app.get('/logout', function(req, res) {
+  req.logout();
+  return res.send('logged out');
+});
 
 app.get('/permits', PermitController.read);
 app.post('/permits', PermitController.create);
 app.put('/permits/:id', PermitController.update);
 app.delete('/permits/:id', PermitController.delete);
 
-// app.get('/user', UserController.read);
-app.get('/user/:id', UserController.find);
-
-var port = 9090;
+var mongoURI = config.mongoURI;
+var port = config.port;
 
 app.listen(port, function() {
     console.log('listening at port: ' + port);
 });
-
-var mongoURI = 'mongodb://localhost:27017/cor';
 
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', function() {
