@@ -45,8 +45,8 @@ app.post('/permits', PermitController.create);
 app.put('/permits/:id', PermitController.update);
 app.delete('/permits/:id', PermitController.delete);
 
-var mongoURI = config.mongoURI;
-var port = config.port;
+var mongoURI = process.env.MONGOLAB_URI;
+var port = process.env.PORT || 9090;
 
 app.listen(port, function() {
     console.log('listening at port: ' + port);
