@@ -6,15 +6,15 @@ var session = require('express-session');
 var passport = require('./services/passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var config = require('../config');
-var PermitController = require('./Controllers/PermitController');
-var UserController = require('./Controllers/UserController');
+var config = require('./config');
+var PermitController = require('./Server/Controllers/PermitController');
+var UserController = require('./Server/Controllers/UserController');
 
 var app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + './public'));
 app.use(session({
   secret: config.secret,
   saveUninitialized: true,
