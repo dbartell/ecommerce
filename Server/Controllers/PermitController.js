@@ -1,4 +1,4 @@
-var Permit = require('./Server/Models/PermitApplication');
+var Permit = require('./Server/Models/PermitApplication.js');
 
 module.exports = {
   create: function(req, res) {
