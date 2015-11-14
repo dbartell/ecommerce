@@ -3,7 +3,9 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
 var session = require('express-session');
-var passport = require('./services/passport');
+// herlsdofajpsdofiajdfs;
+var passportCode = require('./Services/Passport');
+var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 var config = require('./config');
