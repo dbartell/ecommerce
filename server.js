@@ -6,7 +6,6 @@ var session = require('express-session');
 var passport = require('./services/passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var config = require('../config');
 var PermitController = require('./Controllers/PermitController');
 var UserController = require('./Controllers/UserController');
 
@@ -16,7 +15,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + '/../public'));
 app.use(session({
-  secret: config.secret,
+  secret: "yodevyn",
   saveUninitialized: true,
   resave: true
 }));
@@ -45,8 +44,8 @@ app.post('/permits', PermitController.create);
 app.put('/permits/:id', PermitController.update);
 app.delete('/permits/:id', PermitController.delete);
 
-var mongoURI = config.mongoURI;
-var port = config.port;
+var mongoURI = 'mongodb://localhost:27017/cor';
+var port = 9090;
 
 app.listen(port, function() {
     console.log('listening at port: ' + port);

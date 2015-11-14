@@ -1,4 +1,4 @@
-angular.module('corApp').controller('permitsCtrl', function($scope, permitService) {
+angular.module('corApp').controller('permitsCtrl', function($scope, permitService, authService) {
   $scope.permit = {};
   // JQUERY FOR ACCORDIAN
   $(document).ready(function(){
