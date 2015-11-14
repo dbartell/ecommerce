@@ -3,8 +3,10 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
 var session = require('express-session');
-var passport = require('./Services/passport');
+var passportCode = require('./Services/passport');
+var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+
 
 var config = require('../config');
 var PermitController = require('./Controllers/PermitController');
