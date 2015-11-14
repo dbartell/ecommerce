@@ -37,7 +37,7 @@ angular.module('corApp').controller('adminHomeCtrl', function($scope, permitServ
           'elementHandlers': specialElementHandlers
       },
       function (dispose) {
-          pdf.save('Test.pdf');
+          pdf.save('Permit.pdf');
       }, margins);
   };
 });
